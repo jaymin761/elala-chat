@@ -1,0 +1,20 @@
+{
+  "PORT": 6379,
+  "DB_CONNECTION": "mysql",
+  "DB_HOST": "localhost",
+  "DB_PORT": 3306,
+  "DB_DATABASE": "matorqhi_elala",
+  "DB_USERNAME": "root",
+  "DB_PASSWORD": "",
+  "DB_LOGGING": true,
+  "API_KEY_ENC": "U08u7RV36IInEH3n5vgHFk12qksVreuC",
+  "API_KEY_DEC": "pjgCAj2ciOmyqdjFN8MLWW1Daol7esKV",
+  "API_ENCRYPT_VI_KEY": "ORrsjvgMGIsjvgU0",
+  "API_DECRYPT_VI_KEY": "XaBBQIAxp9IDJotZ",
+  "GROUPIMAGE": "/storage/group/",
+  "PRODUCTION_NOTI": false,
+  "LIVE_IMAGE_URL":"http://81.208.166.45/storage/",
+  "SERVER_ENCRYPTION_KEY":"U08u7vV36DInEH3n5vgHFk12qksVreuC",
+  "SERVER_ENCRYPTION_IV":"ORrsjvgMGIsjvgU0"
+
+}
