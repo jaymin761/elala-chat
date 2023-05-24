@@ -1,7 +1,7 @@
 {
   "PORT": 6379,
   "DB_CONNECTION": "mysql",
-  "DB_HOST": "http://119.18.54.125/",
+  "DB_HOST": "119.18.54.125",
   "DB_PORT": 3306,
   "DB_DATABASE": "matorqhi_elala",
   "DB_USERNAME": "matorqhi_elala",
