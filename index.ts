@@ -11,6 +11,7 @@ const app = express();
 const { Server } = require("socket.io");
 import { QueryTypes } from "sequelize";
 import SocketHandler from './controllers/SocketHandler';
+const config = require('config')
 
 
 // const server = require('http').Server(app)
@@ -50,7 +51,13 @@ server.listen(AppConstants.PORT, async () => {
 
         io.on('connection', (args: Socket) => SocketHandler.chatHandler(io, args));
 
-
+        console.log(config.get("DB_CONNECTION"));
+        console.log(config.get("DB_HOST"));
+        console.log(config.get("DB_PORT"));
+        console.log(config.get("DB_USERNAME"));
+        console.log(config.get("DB_PASSWORD"));
+        console.log(config.get("DB_DATABASE"));
+        
         console.log(`⚡️[NodeJs server]: Server is running at http://localhost:${AppConstants.PORT}`)
 
         await sequelizeClient.authenticate().then(async () => {
