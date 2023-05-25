@@ -53,18 +53,6 @@ export class SequelizeDbHelper {
 
     }
 
-    async getResUserById(userId: number): Promise<any> {
-        console.log('getResUserById',{userId});
-        
-        return (await Doctor.findOne({where: {id: userId}, attributes: ['id', 'display_name', 'profile','device_type','device_token','voipToken','notification_status']})) ?? null
-    }
-
-
-    async getFcmReceiverByUserId(userId: number): Promise<any> {
-        return (await Patient.findOne({where: {id: userId}, attributes: ['id', 'display_name', 'profile','device_type','device_token','voipToken','notification_status']}))??null
-    }
-
-
     /**
      * The static method that controls the access to the singleton instance.
      *

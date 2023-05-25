@@ -40,12 +40,12 @@ app.use(bodyParser.urlencoded({ limit: '200mb', extended: true }))
 app.use(express.static('public'))
 app.use(decryptedData.DecryptedData)
 
-async function DBSettings() {
+// async function DBSettings() {
 
-    await sequelizeDbHelper.getSequelizeClint().query("SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));", { type: QueryTypes.UPDATE, }).then(function () {
-        return true;
-    });
-}
+//     await sequelizeDbHelper.getSequelizeClint().query("SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));", { type: QueryTypes.UPDATE, }).then(function () {
+//         return true;
+//     });
+// }
 server.listen(AppConstants.PORT, async () => {
     try {
 
@@ -70,7 +70,7 @@ server.listen(AppConstants.PORT, async () => {
             ])
 
             await sequelizeClient.sync()
-            await DBSettings();
+            // await DBSettings();
 
 
         }).catch((reason: any) => console.log('----------------[Sequelize Error] ', reason))
