@@ -11,6 +11,7 @@ const app = express();
 const { Server } = require("socket.io");
 import { QueryTypes } from "sequelize";
 import SocketHandler from './controllers/SocketHandler';
+import { Router } from './routers/api_router';
 const config = require('config')
 
 
@@ -39,6 +40,7 @@ app.use(bodyParser.json({ limit: '200mb' }))
 app.use(bodyParser.urlencoded({ limit: '200mb', extended: true }))
 app.use(express.static('public'))
 app.use(decryptedData.DecryptedData)
+app.use(Router)
 
 // async function DBSettings() {
 
