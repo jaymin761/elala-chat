@@ -2,7 +2,7 @@ import {ConnectedUser} from "../models/connectedUser";
 import {UniqueConnectedUser} from "../models/uniqueConnectedUser";
 
 export class AppConstants {
-    public static readonly PORT = 3001
+    public static readonly PORT = 3000
     public static userMap: { [userKey: string]: ConnectedUser } = {}
     public static uniqueMap: { [userKey: string]: UniqueConnectedUser } = {}
     public static lastSeenMap: { [userKey: string]: string } = {}
